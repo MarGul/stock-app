@@ -44,10 +44,12 @@
 				const order = {
 					stockId: this.stock.id,
 					stockPrice: this.stock.price,
-					quantitiy: this.quantity
+					quantity: this.quantity
 				};
 
-				console.log(order);
+				// Cal the buy stock action on the state
+				this.$store.dispatch('buyStock', order);
+
 				this.quantity = 0;
 			}
 		}

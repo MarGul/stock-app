@@ -15,7 +15,11 @@ const mutations = {
 
 const actions = {
 	buyStock: ({ commit }, order) => {
-		commit();
+		// This commits a mutation in the Portfolio module. Because we are
+		// importing these to the global state we can commit mutations in 
+		// other modules. So that's why the mutations and everything in here
+		// have to have unique names.
+		commit('BUY_STOCK', order);
 	},
 	initStocks: ({commit}) => {
 		commit('SET_STOCKS', stocks);
