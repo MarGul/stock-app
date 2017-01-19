@@ -26,7 +26,7 @@ const mutations = {
 		// Update Funds
 		state.funds -= stockPrice * quantity;
 	},
-	'SELL_STOCKS'(state, {stockId, quantity, stockPrice}) {
+	'SELL_STOCK'(state, {stockId, quantity, stockPrice}) {
 		// Get the stocks object by id
 		const record = state.stocks.find(element => element.id == stockId);
 

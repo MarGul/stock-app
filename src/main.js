@@ -8,6 +8,11 @@ import store from './store/store'
 
 Vue.use(VueRouter);
 
+// Create a global filter to output funds in currency format
+Vue.filter('currency', (value) => {
+	return '$' + value.toLocaleString();
+});
+
 const router = new VueRouter({
 	mode: 'history',
 	routes // This is ES6. Instead of routes: routes we can short it with this.
