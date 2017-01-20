@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 
 import App from './App.vue'
 import { routes } from './routes'
@@ -7,6 +8,10 @@ import store from './store/store'
 
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
+
+// Set the main URL we are always using
+Vue.http.options.root = "www.example.com";
 
 // Create a global filter to output funds in currency format
 Vue.filter('currency', (value) => {

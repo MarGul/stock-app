@@ -40,7 +40,7 @@
 
 	@keyFrames slide-in {
 		from {	
-			transform: translateY(-30px);
+			transform: translateY(-60px);
 			opacity: 0
 		}
 		to {
@@ -55,7 +55,7 @@
 			opacity: 1;
 		}
 		to {
-			transform: translateY(-30px);
+			transform: translateY(-60px);
 			opacity: 0;
 		}
 	}
